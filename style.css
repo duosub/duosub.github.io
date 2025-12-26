@@ -34,15 +34,17 @@ nav {
     padding: 0.6rem 1.2rem;
     border-radius: 5px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero strong { color: #60a5fa; }
 
-.grid {
+.grid, .install-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    padding: 2rem 10%;
+    padding: 1rem 0;
 }
 
 .card {
@@ -52,12 +54,46 @@ nav {
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-section { padding: 3rem 10%; }
+section { padding: 3rem 10%; border-bottom: 1px solid #e2e8f0; }
 
-h2 { border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 1.5rem; }
+h2 { border-bottom: 3px solid var(--primary); display: inline-block; margin-bottom: 1.5rem; }
+
+.btn-disabled {
+    display: inline-block;
+    background: #cbd5e1;
+    color: #64748b;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+    margin-top: 10px;
+}
+
+footer {
+    background: #1e293b;
+    color: white;
+    padding: 3rem 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 1.8rem; }
-    header { padding: 1.5rem 5%; }
-    section { padding: 2rem 5%; }
+    header, section { padding: 2rem 5%; }
+}
+.btn-download {
+    display: inline-block;
+    background: #10b981; /* Зеленый цвет для скачивания */
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+.btn-download:hover {
+    background: #059669;
 }
