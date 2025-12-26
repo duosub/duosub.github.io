@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duosub SRT - Dual Subtitles for Video</title>
+    <meta name="keywords" content="Dual Subtitles, SRT player, Language Learning, Chrome Extension, Second Subtitles, Video Player, Subtitle Sync, Manifest V3">
+    <meta name="description" content="Enhance your language learning with Duosub SRT. Add secondary subtitles to any video player using local SRT files.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,49 +15,64 @@
             <a href="#download" class="btn-top">Install Extension</a>
         </nav>
         <div class="hero">
-            <h1>Master Languages with Dual Subtitles</h1>
-            <p>Upload external .SRT files to any video player and watch with two languages simultaneously.</p>
+            <h1>Master Languages with <strong>Dual Subtitles</strong></h1>
+            <p>Upload external <strong>SRT files</strong> to any <strong>video player</strong> and watch with two languages simultaneously.</p>
         </div>
     </header>
 
     <main>
+        <section id="about">
+            <h2>About the Extension</h2>
+            <p><strong>Duosub SRT</strong> is a <strong>cross-platform browser extension</strong> designed to enhance <strong>language learning</strong> and accessibility. It allows users to overlay <strong>custom SRT subtitle files</strong> onto any <strong>video player</strong>. By providing simultaneous display of two languages, it bridges the gap between native content and learner comprehension.</p>
+        </section>
+
         <section id="features">
-            <h2>Why Duosub SRT?</h2>
+            <h2>Key Features & Why It’s Better</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Custom SRT Support</h3>
-                    <p>Load any local .srt file directly into the video player. No server uploads required.</p>
+                    <h3><strong>Universal Compatibility</strong></h3>
+                    <p>Works with <strong>HTML5 players</strong> across various platforms, not limited to a single streaming service.</p>
                 </div>
                 <div class="card">
-                    <h3>Smart Sync</h3>
-                    <p>Easily adjust subtitle timing on the fly to match the audio perfectly.</p>
+                    <h3><strong>Local Processing</strong></h3>
+                    <p>Your <strong>subtitle files</strong> are processed entirely in your browser. We respect your <strong>privacy</strong> and never upload your content to any servers.</p>
                 </div>
                 <div class="card">
-                    <h3>Fully Customizable</h3>
-                    <p>Change font size, colors, and position to fit your viewing preferences.</p>
+                    <h3><strong>Customization Engine</strong></h3>
+                    <p>Full control over <strong>font weight</strong>, <strong>background opacity</strong>, and <strong>vertical offset</strong> to ensure subtitles never block critical on-screen action.</p>
+                </div>
+                <div class="card">
+                    <h3><strong>Format Support</strong></h3>
+                    <p>Optimized for standard <strong>SubRip (.srt)</strong> format with support for various character encodings like <strong>UTF-8</strong>.</p>
                 </div>
             </div>
         </section>
 
-        <section id="how-it-works">
-            <h2>How to Use</h2>
-            <ol>
-                <li>Open a video on your favorite streaming site.</li>
-                <li>Click the <b>Duosub SRT</b> icon in your browser toolbar.</li>
-                <li>Drag and drop your .srt file or select it from your device.</li>
-                <li>Adjust settings and enjoy dual-language learning!</li>
-            </ol>
+        <section id="technical">
+            <h2>Technical Implementation</h2>
+            <ul>
+                <li><strong>Engine:</strong> Built on <strong>Manifest V3</strong> for maximum security and performance.</li>
+                <li><strong>Rendering:</strong> Uses a <strong>MutationObserver</strong> to detect video player elements and inject a custom subtitle container without interfering with the site's original code.</li>
+                <li><strong>Performance:</strong> Lightweight <strong>Vanilla JS</strong> implementation ensures zero impact on CPU/RAM while watching high-definition video.</li>
+                <li><strong>Cross-Platform:</strong> <strong>Responsive design</strong> ensures the settings UI is accessible on <strong>desktop</strong>, mobile, and tablets.</li>
+            </ul>
+        </section>
+
+        <section id="tags" style="opacity: 0.7; font-size: 0.8rem;">
+            <p>Tags: #DualSubtitles #LanguageLearning #SRT #VideoTools #Education #BrowserExtension #ChromeDev #Bilingvo</p>
         </section>
 
         <section id="privacy">
             <h2>Privacy Policy</h2>
-            <p>Duosub SRT is built with privacy in mind. The extension processes subtitle files locally on your device. We do not collect, store, or transmit any personal data, browsing history, or the content of your subtitle files to external servers.</p>
+            <p>Duosub SRT processes data locally. We do not collect, store, or transmit any personal data or subtitle content to external servers.</p>
         </section>
     </main>
-<footer>
-    <p>&copy; 2025 Duosub SRT. Distributed under the <b>MIT License</b>.</p>
-    <p>Available for Chrome, Edge, and other browsers.</p>
-</footer>
+
+    <footer>
+        <p>&copy; 2025 Duosub SRT. Distributed under the <strong>MIT License</strong>.</p>
+        <p>Available for Chrome, Edge, and other Chromium-based browsers.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
