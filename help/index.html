@@ -3,232 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Center | DuoSub - Subtitle Creator</title>
-    <meta name="description" content="User manual and troubleshooting guide for DuoSub - Subtitle Creator extension. Learn how to translate subtitles and fix API key errors.">
-    <style>
-        :root {
-            --primary: #1a73e8;
-            --text: #202124;
-            --bg: #ffffff;
-            --light-bg: #f8f9fa;
-            --border: #dadce0;
-            --code-bg: #282c34;
-            --code-text: #abb2bf;
-        }
+    <title>User Manual & Help | DuoSub - Dual Subtitle Creator</title>
+    
+    <!-- Professional SEO Meta Tags -->
+    <meta name="description" content="Comprehensive guide for DuoSub. Learn how to translate subtitles (.srt, .vtt, .ass), fix API key errors, and use dual subtitles for effective language learning.">
+    <meta name="keywords" content="DuoSub Help, SRT Translator, Dual Subtitles, Language Learning Strategy, Fix ALL_KEYS_DEAD, Local Subtitle Processing, Chrome Extension Manual">
+    <meta name="author" content="DuoSub Team">
+    <meta name="robots" content="index, follow">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            margin: 0;
-            padding: 0;
-            background: var(--light-bg);
-        }
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="DuoSub User Manual - Master Dual Subtitles">
+    <meta property="og:description" content="Step-by-step guide to translating subtitles locally and fixing API quotas.">
+    <meta property="og:url" content="https://duosub.github.io/help/">
+    <meta property="og:image" content="https://duosub.github.io/icon128.png">
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background: var(--bg);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            min-height: 100vh;
-        }
+    <!-- Schema.org JSON-LD for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DuoSub - Subtitle Creator",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Chrome, Edge, Firefox, Opera, Brave",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Translate SRT/VTT locally, Dual Subtitle Creation, Privacy-focused"
+    }
+    </script>
 
-        /* Header */
-        header {
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        header img {
-            width: 32px;
-            height: 32px;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-            color: var(--primary);
-        }
-
-        /* Navigation */
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-            background: var(--light-bg);
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        /* Content Blocks */
-        section {
-            margin-bottom: 50px;
-            scroll-margin-top: 20px;
-        }
-
-        h2 {
-            font-size: 22px;
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 18px;
-            color: #444;
-            margin-top: 25px;
-        }
-
-        p, li {
-            font-size: 15px;
-            color: #4a4a4a;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        /* Alert Box */
-        .alert {
-            background-color: #fff4e5;
-            border-left: 5px solid #ffa000;
-            padding: 15px;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-
-        /* Code Blocks */
-        pre {
-            background: var(--code-bg);
-            color: var(--code-text);
-            padding: 15px;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-size: 13px;
-        }
-
-        code {
-            font-family: 'Consolas', 'Monaco', monospace;
-        }
-
-        .step-number {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            width: 24px;
-            height: 24px;
-            text-align: center;
-            border-radius: 50%;
-            font-size: 14px;
-            line-height: 24px;
-            margin-right: 10px;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 15px; }
-            nav ul { flex-direction: column; gap: 10px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+    <!-- Header -->
     <header>
-        <!-- Replace with your icon URL if hosted, or keep generic emoji -->
-        <span style="font-size: 32px;">❓</span> 
-        <h1>DuoSub - Subtitle Creator</h1>
+        <div class="container header-content">
+            <div class="brand">
+                <a href="https://duosub.github.io/" class="logo-link">
+                    <span class="icon">📝</span>
+                    <span class="logo-text">DuoSub Help Center</span>
+                </a>
+            </div>
+            <nav>
+                <a href="#guide">User Guide</a>
+                <a href="#api-fix" class="highlight-link">⚠️ Fix API Error</a>
+                <a href="#learning">Learning Strategy</a>
+                <a href="https://duosub.github.io/" class="btn-primary">Back to Home</a>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#manual">User Manual</a></li>
-            <li><a href="#api-guide" style="color:#d93025; font-weight:bold;">⚠️ Fix "ALL_KEYS_DEAD"</a></li>
-            <li><a href="#troubleshooting">Troubleshooting</a></li>
-            <li><a href="https://duosub.github.io/donate/index.html">Support Development</a></li>
-        </ul>
-    </nav>
-
-    <!-- MANUAL SECTION -->
-    <section id="manual">
-        <h2>User Manual</h2>
-        <p><strong>DuoSub</strong> is a professional browser extension designed to translate subtitle files into other languages while preserving original timestamps. It specializes in creating "Dual Subtitles" (Original + Translation) for language learning and content creation.</p>
-
-        <h3>1. The Header & Settings</h3>
-        <ul>
-            <li><strong>🌐 UI Language (Globe Icon):</strong> Changes the language of the extension's interface buttons and menus (English, Spanish, Chinese, French, German, Russian).</li>
-            <li><strong>🌓 Dark/Light Mode:</strong> Toggles between a light and dark theme for comfortable viewing.</li>
-        </ul>
-
-        <h3>2. File Upload Area</h3>
-        <p>Click the large folder icon 📂 area to select a subtitle file from your computer.</p>
-        <ul>
-            <li><strong>Supported Formats:</strong> .srt, .vtt, .ass, .ssa, .sbv, .sub, .txt</li>
-            <li><strong>Note:</strong> Files must be <strong>UTF-8</strong> encoded for correct character display.</li>
-        </ul>
-
-        <h3>3. Target Language Selector</h3>
-        <p>Select the language you want to translate your subtitles into. Use the search bar inside the dropdown to find one of the 100+ supported languages quickly.</p>
-
-        <h3>4. Action Buttons</h3>
-        <ul>
-            <li><strong>Translate:</strong> Starts the process.</li>
-            <li><strong>Pause/Resume:</strong> Temporarily stops or continues translation (useful for long files).</li>
-            <li><strong>Download:</strong> Appears when done. Saves a new file named <code>OriginalName_[LANG].srt</code> containing both original and translated text.</li>
-        </ul>
-    </section>
-
-    <!-- API GUIDE SECTION (CRITICAL) -->
-    <section id="api-guide">
-        <h2 style="border-color: #d93025; color: #d93025;">How to Fix "Error: ALL_KEYS_DEAD"</h2>
+    <main class="container">
         
-        <div class="alert">
-            <strong>What is this error?</strong><br>
-            The extension uses free, shared Google Translate keys. If too many people use them at once, the daily quota runs out, showing <code>ALL_KEYS_DEAD</code>. To fix this immediately, create your own free <strong>Personal API Key</strong> using Google Apps Script.
-        </div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Documentation & Troubleshooting</h1>
+            <p>Master the art of dual subtitles. Translate <code>.srt</code>, <code>.vtt</code>, <code>.ass</code>, <code>.sub</code>, and <code>.txt</code> files instantly directly in your browser.</p>
+        </section>
 
-        <h3>Step-by-Step Guide:</h3>
+        <!-- Quick Navigation / TOC -->
+        <section class="toc">
+            <h2>Quick Navigation</h2>
+            <div class="grid-links">
+                <a href="#guide" class="toc-card">📖 How to Use</a>
+                <a href="#api-fix" class="toc-card alert-card">🔧 Fix "ALL_KEYS_DEAD"</a>
+                <a href="#learning" class="toc-card">🧠 Learning Strategies</a>
+                <a href="#privacy" class="toc-card">🔒 Privacy & Security</a>
+            </div>
+        </section>
 
-        <p><span class="step-number">1</span> Go to <a href="https://script.google.com/home/start" target="_blank">script.google.com</a> and sign in with your Google account.</p>
+        <!-- Usage Guide -->
+        <section id="guide" class="content-block">
+            <h2>📖 User Guide: Getting Started</h2>
+            <p>DuoSub is designed as a <strong>Single Purpose</strong> tool: to convert and translate subtitle files locally without data collection.</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <span class="step-num">1</span>
+                    <h3>Upload File</h3>
+                    <p>Click the <strong>Folder Icon</strong> (📂) area. Select your subtitle file. We support UTF-8 encoded <code>.srt</code>, <code>.vtt</code>, <code>.ass</code>, <code>.sbv</code>, <code>.sub</code>, and <code>.txt</code>.</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">2</span>
+                    <h3>Select Language</h3>
+                    <p>Choose your target language from the list of 100+ supported options (e.g., Spanish, Chinese, French).</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">3</span>
+                    <h3>Translate & Download</h3>
+                    <p>Click <strong>Translate</strong>. Watch the live preview. Once finished (100%), click <strong>Download</strong> to get your new Dual Subtitle file.</p>
+                </div>
+            </div>
+        </section>
 
-        <p><span class="step-number">2</span> Click the big <strong>"+ New Project"</strong> button.</p>
+        <!-- API FIX SECTION - CRITICAL -->
+        <section id="api-fix" class="content-block api-section">
+            <div class="api-header">
+                <h2>⚠️ How to Fix "Error: ALL_KEYS_DEAD"</h2>
+                <span class="badge-urgent">Important</span>
+            </div>
+            <p>This error means the community shared keys have reached their daily limit with Google. To fix this permanently, create your own free <strong>Personal API Key</strong>.</p>
 
-        <p><span class="step-number">3</span> Delete any code in the editor and paste the following code exactly:</p>
+            <div class="accordion">
+                <h3>Step-by-Step Instructions</h3>
+                <ol>
+                    <li>Go to <a href="https://script.google.com/home/start" target="_blank" rel="nofollow">script.google.com</a> and sign in.</li>
+                    <li>Click <strong>+ New Project</strong>.</li>
+                    <li>Delete the existing code and paste the code block below:</li>
+                </ol>
 
-<pre><code>function doPost(e) {
+                <div class="code-wrapper">
+                    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                    <pre><code id="scriptCode">function doPost(e) {
   var p = JSON.parse(e.postData.contents);
   var translated = LanguageApp.translate(p.q, "", p.target);
   return ContentService.createTextOutput(JSON.stringify({
@@ -236,42 +126,76 @@
     translatedText: translated
   })).setMimeType(ContentService.MimeType.JSON);
 }</code></pre>
+                </div>
 
-        <p><span class="step-number">4</span> <strong>Deploy the App (Crucial Step):</strong></p>
-        <ul>
-            <li>Click the blue <strong>Deploy</strong> button (top right) > Select <strong>New deployment</strong>.</li>
-            <li>Click the Gear Icon (⚙️) next to "Select type" and choose <strong>Web app</strong>.</li>
-            <li><strong>Description:</strong> DuoSub Key (or anything you want).</li>
-            <li><strong>Execute as:</strong> Me (your email).</li>
-            <li><strong>Who has access:</strong> <span style="color:red; font-weight:bold;">Anyone</span> (Must be "Anyone" or it won't work!).</li>
-            <li>Click <strong>Deploy</strong>.</li>
-        </ul>
+                <ol start="4">
+                    <li><strong>Deploy the App (Crucial):</strong>
+                        <ul>
+                            <li>Click <strong>Deploy</strong> (blue button) &rarr; <strong>New deployment</strong>.</li>
+                            <li>Click the ⚙️ icon &rarr; select <strong>Web app</strong>.</li>
+                            <li>Description: <code>DuoSub</code>.</li>
+                            <li>Execute as: <strong>Me</strong>.</li>
+                            <li>Who has access: <strong style="color: #d93025;">Anyone</strong> (Required).</li>
+                            <li>Click <strong>Deploy</strong> &rarr; Authorize access &rarr; Copy the <strong>Web App URL</strong>.</li>
+                        </ul>
+                    </li>
+                    <li>Open the extension, click <strong>"⚙️ Use Personal API Key"</strong>, and paste your URL.</li>
+                </ol>
+            </div>
+        </section>
 
-        <p><span class="step-number">5</span> <strong>Authorize:</strong> Google will ask for permission. Click "Review permissions" > Choose Account > Advanced > Go to (Project Name) (unsafe) > Allow.</p>
+        <!-- Learning Strategies -->
+        <section id="learning" class="content-block">
+            <h2>🧠 Language Learning Strategies</h2>
+            <p>Maximize your learning using Dual Subtitles with these proven methods:</p>
+            
+            <div class="strategy-grid">
+                <div class="strat-card">
+                    <h3>1. The Shadowing Technique</h3>
+                    <p><strong>Method:</strong> Listen to the audio and read the <em>Target Language</em> subtitle simultaneously. Repeat what you hear immediately.</p>
+                    <p><strong>Benefit:</strong> Improves pronunciation, prosody, and speaking speed.</p>
+                </div>
+                <div class="strat-card">
+                    <h3>2. Dual Coding & Context</h3>
+                    <p><strong>Method:</strong> Use the <em>Original Language</em> subtitle only when you don't understand a word. Treat it as an instant dictionary.</p>
+                    <p><strong>Benefit:</strong> Creates strong neural links between the visual context (video) and the new vocabulary.</p>
+                </div>
+                <div class="strat-card">
+                    <h3>3. Passive Immersion</h3>
+                    <p><strong>Method:</strong> Watch content comfortably with Dual Subs. Your brain subconsciously absorbs sentence structures.</p>
+                    <p><strong>Benefit:</strong> Reduces "learning fatigue" allowing for longer study sessions.</p>
+                </div>
+            </div>
+        </section>
 
-        <p><span class="step-number">6</span> <strong>Copy URL:</strong> Copy the "Web app URL" (it ends with <code>/exec</code>).</p>
+        <!-- Privacy & Technical -->
+        <section id="privacy" class="content-block">
+            <h2>🔒 Privacy, Security & Technical Specs</h2>
+            <p>We adhere to strict Google Web Store Policies regarding user data.</p>
+            
+            <ul class="specs-list">
+                <li><strong>Local Processing:</strong> All file parsing happens directly in your browser's memory using JavaScript. We do not upload your files to any server.</li>
+                <li><strong>Single Purpose:</strong> This extension does one thing only: translates subtitle files. No bloatware, no tracking.</li>
+                <li><strong>No User Data Collection:</strong> We do not collect cookies, IP addresses, or personal information.</li>
+                <li><strong>Open Source:</strong> The core logic is verifiable. The styling uses pure CSS variables for a lightweight footprint.</li>
+            </ul>
+        </section>
 
-        <p><span class="step-number">7</span> <strong>Paste in Extension:</strong> Open DuoSub, click <strong>"⚙️ Use Personal API Key"</strong>, and paste your URL there.</p>
-        
-        <p><em>Done! You now have your own unlimited private translation server.</em></p>
-    </section>
+    </main>
 
-    <!-- TROUBLESHOOTING -->
-    <section id="troubleshooting">
-        <h2>Troubleshooting</h2>
-        
-        <h3>Strange symbols in subtitles?</h3>
-        <p>Make sure your original subtitle file is saved with <strong>UTF-8 Encoding</strong>. You can do this by opening the file in Notepad (Windows) -> "Save As" -> Encoding: UTF-8.</p>
-
-        <h3>Download button doesn't work?</h3>
-        <p>Ensure the translation reached 100% and check your browser's "Downloads" permission for the extension.</p>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 DuoSub Development. <br>
-        <a href="https://duosub.github.io/donate/index.html">Buy me a coffee ☕</a></p>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="https://duosub.github.io/">Main Page</a>
+                <a href="https://duosub.github.io/donate/index.html">Support Development ☕</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p>&copy; <span id="year"></span> DuoSub - Subtitle Creator. All rights reserved.</p>
+            <p style="opacity: 0.6; font-size: 0.8rem;">Universal Extension for Chrome, Edge, Brave, Opera, Vivaldi, Firefox.</p>
+        </div>
     </footer>
-</div>
 
+    <script src="script.js"></script>
 </body>
 </html>
