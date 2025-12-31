@@ -18,16 +18,20 @@
 
 ## 🛠 Installation
 
-### Option 1: Manual Installation (Developer Mode)
-1. Download the latest version from the `/extension-build/` folder in this repo.
-2. Unzip the file.
-3. Open Chrome and navigate to `chrome://extensions/`.
-4. Enable **Developer mode** in the top right corner.
-5. Click **Load unpacked** and select the unzipped folder.
+### 🚀 Installation
 
-### Option 2: Chrome Web Store
-*Coming soon...* (Link will be updated after publication).
+#### Option 1: Chrome Web Store (Recommended)
+You can install **DuoSub** directly from the official store for automatic updates:
 
+[![Available in the Chrome Web Store](https://img.shields.io/badge/Chrome_Web_Store-DuoSub-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chromewebstore.google.com/detail/duosub-subtitle-creator/dnlmeijkfchinlchooiolkcchbcmpikj)
+
+#### Option 2: Manual Installation (Developer Mode)
+1. Download the [latest release ZIP](https://github.com/duosub/duosub.github.io/releases/download/v1.0.0/duosub_v1.0.0.zip).
+2. Unpack the archive on your computer.
+3. Open Chrome and go to `chrome://extensions/`.
+4. Enable **Developer mode** (toggle in the top right).
+5. Click **Load unpacked** and select the extension folder.
+   
 ## 🚀 Technical Implementation
 The extension uses a **MutationObserver** to monitor the DOM for video elements. Once detected, it creates a transparent overlay layer where the secondary subtitles are rendered using **Vanilla JavaScript**. This ensures zero lag and high compatibility without modifying the original site scripts.
 
