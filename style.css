@@ -42,6 +42,16 @@ nav {
     margin-left: 10px;
 }
 
+.btn-top2 {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+}
+
 .btn-top2:hover {
     background-color: darkred;
 }
