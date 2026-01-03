@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuoSub Development Team Support</title>
+    <title>Support DuoSub Team</title>
     <style>
         :root {
-            --primary: #007aff;
-            --primary-hover: #0062cc;
             --bg: #f4f7f9;
             --text-main: #1a1f36;
             --text-muted: #697386;
             --border: #e3e8ee;
+            --kofi-color: #29abe0;
+            --patreon-color: #ff424d;
+            --secure-green: #34c759;
         }
 
         body { 
@@ -31,149 +32,162 @@
         
         .payment-card { 
             background: #ffffff; 
-            border-radius: 24px; 
-            padding: 45px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0,0,0,0.01);
+            border-radius: 28px; 
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.02);
             text-align: left;
         }
 
-        h1 { font-size: 24px; font-weight: 600; margin: 0 0 12px 0; letter-spacing: -0.5px; text-align: center; color: #111; }
-        .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 30px; text-align: center; line-height: 1.6; font-weight: 400; }
+        h1 { font-size: 24px; font-weight: 700; margin: 0 0 10px 0; text-align: center; color: #111; letter-spacing: -0.5px; }
+        .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 30px; text-align: center; line-height: 1.5; }
 
-       
-        .status-badge {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background: #f0f7ff;
-            color: var(--primary);
-            padding: 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 500;
-            margin-bottom: 25px;
-        }
-
-       
+        /* Выбор суммы */
         .amount-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
         .amount-btn { 
             border: 1px solid var(--border); 
             background: #fff; 
-            padding: 14px 0; 
+            padding: 12px 0; 
             border-radius: 12px; 
-            font-weight: 500; 
-            font-size: 16px;
+            font-weight: 600; 
+            font-size: 15px;
             cursor: pointer; 
-            transition: all 0.2s ease;
+            transition: all 0.2s;
             color: var(--text-main);
         }
-        .amount-btn:hover { border-color: var(--primary); color: var(--primary); }
-        .amount-btn.active { border-color: var(--primary); background: var(--primary); color: #fff; }
+        .amount-btn.active { border-color: var(--text-main); background: var(--text-main); color: #fff; }
 
-      
-        .input-wrapper { position: relative; margin-bottom: 30px; }
+        .input-wrapper { position: relative; margin-bottom: 25px; }
         .input-field { 
             width: 100%; 
             box-sizing: border-box; 
-            padding: 18px; 
+            padding: 15px; 
             border-radius: 12px; 
             border: 1px solid var(--border); 
-            font-size: 22px; 
-            font-weight: 500; 
-            text-align: center;
-            transition: all 0.2s ease;
-        }
-        .input-field:focus { border-color: var(--primary); outline: none; }
-        .currency-symbol { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #a3acb9; font-weight: 500; font-size: 18px; }
-
-        
-        .pay-btn { 
-            display: block; 
-            width: 100%; 
-            background: var(--primary); 
-            color: #fff; 
-            text-decoration: none; 
-            text-align: center; 
-            padding: 18px 0; 
-            border-radius: 12px; 
+            font-size: 20px; 
             font-weight: 600; 
-            font-size: 17px;
-            transition: all 0.2s ease;
+            text-align: center;
+            transition: border-color 0.2s;
         }
-        .pay-btn:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: 0 5px 15px rgba(0, 122, 255, 0.1); }
+        .input-field:focus { border-color: var(--kofi-color); outline: none; }
+        .currency-symbol { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #a3acb9; font-weight: 600; }
 
-       
+        /* Кнопки сервисов */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px 0;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+
+        .btn-kofi { 
+            background: var(--kofi-color); 
+            color: #fff; 
+            box-shadow: 0 4px 12px rgba(41, 171, 224, 0.25);
+        }
+
+        .btn-patreon { 
+            background: var(--patreon-color); 
+            color: #fff; 
+            box-shadow: 0 4px 12px rgba(255, 66, 77, 0.25);
+        }
+
+        /* Разделитель "ИЛИ" */
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 15px 0;
+            color: var(--text-muted);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border);
+        }
+        .divider:not(:empty)::before { margin-right: 15px; }
+        .divider:not(:empty)::after { margin-left: 15px; }
+
+        .btn img { height: 22px; width: auto; }
+
+        /* Футер безопасности */
         .secure-footer { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            margin-top: 35px; 
-            padding-top: 25px; 
-            border-top: 1px solid #f8fafc; 
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 1px solid #f1f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        
-        .secure-info { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
-        
+        .secure-status { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
         .status-dot { 
-            width: 8px; 
-            height: 8px; 
-            background: #34c759; 
-            border-radius: 50%; 
-            box-shadow: 0 0 8px rgba(52, 199, 89, 0.4);
-            animation: blink 2s infinite; 
+            width: 8px; height: 8px; background: var(--secure-green); border-radius: 50%; 
+            box-shadow: 0 0 8px rgba(52, 199, 89, 0.6); animation: blink 2s infinite; 
         }
-        
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-        
-        .secure-text { font-size: 10px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .secure-text { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; }
 
-       
-        .logos { display: flex; justify-content: center; align-items: center; gap: 30px; opacity: 0.8; }
-        .logo-visa { font-style: italic; font-weight: 800; font-size: 18px; color: #1434CB; letter-spacing: -1px; }
-        .logo-mastercard { display: flex; align-items: center; position: relative; width: 34px; height: 20px; }
+        /* Логотипы */
+        .logos { display: flex; justify-content: center; align-items: center; gap: 25px; opacity: 0.8; }
+        .logo-visa { font-style: italic; font-weight: 900; font-size: 17px; color: #1434CB; letter-spacing: -1px; }
+        .logo-mastercard { display: flex; align-items: center; position: relative; width: 32px; height: 20px; }
         .circle { width: 20px; height: 20px; border-radius: 50%; position: absolute; }
         .c1 { background: #EB001B; left: 0; }
         .c2 { background: #F79E1B; right: 0; opacity: 0.9; }
-        .logo-paypal { color: #003087; font-weight: 700; font-style: italic; font-size: 16px; }
+        .logo-paypal { color: #003087; font-weight: 700; font-style: italic; font-size: 15px; }
         .logo-paypal span { color: #009CDE; }
 
-        .copyright { margin-top: 45px; font-size: 12px; color: #a3acb9; font-weight: 400; }
+        .copyright { margin-top: 40px; font-size: 12px; color: #a3acb9; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 id="t-title">DuoSub Development Team Support</h1>
-        <p class="subtitle" id="t-subtitle">Help us maintain independence and keep the project free from advertising for everyone.</p>
+        <h1 id="t-title">Support DuoSub</h1>
+        <p class="subtitle" id="t-subtitle">Help us maintain independence and keep the project free for everyone.</p>
 
         <div class="payment-card">
             
-            <div class="status-badge" id="t-status-box">
-                <span id="t-status">Project Infrastructure Active</span>
-            </div>
-
             <div class="amount-grid">
                 <button onclick="setVal(this, 1)" class="amount-btn">$1</button>
-                <button onclick="setVal(this, 5)" class="amount-btn">$5</button>
+                <button onclick="setVal(this, 5)" class="amount-btn active">$5</button>
                 <button onclick="setVal(this, 10)" class="amount-btn">$10</button>
                 <button onclick="setVal(this, 25)" class="amount-btn">$25</button>
             </div>
 
             <div class="input-wrapper">
                 <span class="currency-symbol">$</span>
-                <input type="number" id="custom-amount" class="input-field">
+                <input type="number" id="custom-amount" value="5" class="input-field">
             </div>
 
-            <a id="pay-btn" href="https://link.payoneer.com/Token?t=FC19CE8010F04306BF7837FB27E9C4EA&src=dpl" onclick="process(this)" class="pay-btn">
-                <span id="t-cta">Continue to Payment</span>
+            <a href="https://ko-fi.com/duosub" target="_blank" class="btn btn-kofi">
+                <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi">
+                <span id="t-kofi">Support on Ko-fi</span>
+            </a>
+
+            <div class="divider" id="t-or">OR</div>
+
+            <a href="https://www.patreon.com/DuoSub" target="_blank" class="btn btn-patreon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M15.386 6.001c-3.525 0-6.382 2.857-6.382 6.382 0 3.525 2.857 6.382 6.382 6.382 3.525 0 6.382-2.857 6.382-6.382 0-3.525-2.857-6.382-6.382-6.382zM2.23 20.012h2.939V4.001H2.23v16.011z"/></svg>
+                <span id="t-patreon">Join on Patreon</span>
             </a>
 
             <div class="secure-footer">
-                <div class="secure-info">
+                <div class="secure-status">
                     <div class="status-dot"></div>
-                    <span class="secure-text" id="t-footer">Verified Secure via Payoneer</span>
+                    <span class="secure-text">Secure Checkout</span>
                 </div>
                 
                 <div class="logos">
@@ -185,33 +199,40 @@
         </div>
 
         <p class="copyright">
-            © <span id="current-year"></span> DuoSub Open Source Project. <span id="t-thanks">Thank you!</span>
+            © <span id="current-year"></span> DuoSub Project. <span id="t-thanks">Thank you!</span>
         </p>
     </div>
 
     <script>
         const i18n = {
-            en: { title: "DuoSub Development Team Support", subtitle: "Help us maintain independence and keep the project free from advertising for everyone.", status: "Project Infrastructure Active", cta: "Continue to Payment", footer: "Verified Secure via Payoneer", thanks: "Thank you for your support!", loading: "Connecting..." },
-            ru: { title: "Поддержка команды разработки DuoSub", subtitle: "Помогите нам сохранить независимость и оставить проект свободным от рекламы для каждого.", status: "Инфраструктура проекта активна", cta: "Перейти к оплате", footer: "Защищенный шлюз Payoneer", thanks: "Спасибо за вашу поддержку!", loading: "Соединение..." },
-            es: { title: "Soporte al Equipo de Desarrollo DuoSub", subtitle: "Ayúdanos a mantener la independencia y que el proyecto siga libre de publicidad.", status: "Infraestructura del Proyecto Activa", cta: "Continuar al pago", footer: "Seguro vía Payoneer", thanks: "¡Gracias por tu apoyo!", loading: "Cargando..." }
+            en: { 
+                title: "Support DuoSub", 
+                subtitle: "Help us keep the project independent and free for everyone.", 
+                kofi: "Support on Ko-fi", 
+                or: "OR",
+                patreon: "Join & support on Patreon", 
+                thanks: "Thank you for your support!" 
+            },
+            ru: { 
+                title: "Поддержка DuoSub", 
+                subtitle: "Помогите нам развивать проект без рекламы и ограничений.", 
+                kofi: "Поддержать на Ko-fi", 
+                or: "ИЛИ",
+                patreon: "Подписаться на Patreon", 
+                thanks: "Спасибо за поддержку!" 
+            }
         };
 
         function init() {
-            const userLangs = navigator.languages || [navigator.language];
-            let lang = 'en';
-            for (let l of userLangs) {
-                const s = l.split('-')[0].toLowerCase();
-                if (i18n[s]) { lang = s; break; }
-            }
-
-            const c = i18n[lang];
+            const lang = (navigator.language || 'en').split('-')[0];
+            const c = i18n[lang] || i18n.en;
+            
             document.getElementById('t-title').innerText = c.title;
             document.getElementById('t-subtitle').innerText = c.subtitle;
-            document.getElementById('t-status').innerText = c.status;
-            document.getElementById('t-cta').innerText = c.cta;
-            document.getElementById('t-footer').innerText = c.footer;
+            document.getElementById('t-kofi').innerText = c.kofi;
+            document.getElementById('t-or').innerText = c.or; // Заполняем разделитель
+            document.getElementById('t-patreon').innerText = c.patreon;
             document.getElementById('t-thanks').innerText = c.thanks;
-            document.getElementById('custom-amount').placeholder = lang === 'ru' ? 'Ваша сумма' : 'Your amount';
             document.getElementById('current-year').innerText = new Date().getFullYear();
         }
 
@@ -219,18 +240,6 @@
             document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             document.getElementById('custom-amount').value = val;
-        }
-
-        function process(el) {
-            el.style.opacity = "0.7";
-            el.style.pointerEvents = "none";
-            const userLangs = navigator.languages || [navigator.language];
-            let lang = 'en';
-            for (let l of userLangs) {
-                const s = l.split('-')[0].toLowerCase();
-                if (i18n[s]) { lang = s; break; }
-            }
-            document.getElementById('t-cta').innerText = i18n[lang].loading;
         }
 
         init();
