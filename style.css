@@ -42,6 +42,9 @@ nav {
     margin-left: 10px;
 }
 
+.btn-top2:hover {
+    background-color: darkred;
+}
 .btn-outline {
     background: transparent !important;
     border: 1px solid var(--primary);
