@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuoSub Subtitle Creator Dual Subtitle Translator - SRT VTT ASS</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="keywords" content="DuoSub, Dual Subtitles, Subtitle Creator, Dual Subtitle Translator, Language Learning, Chrome Extension, SRT, VTT, ASS, Manifest V3, VLC, Kodi, MX Player">
+    <meta name="description" content="DuoSub Subtitle Creator Dual Subtitle Translator. Enhance language learning by adding secondary subtitles to any video player using local files.">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNRWB06VGZ"></script>
 <script>
@@ -9,17 +18,6 @@
   gtag('js', new Date());
   gtag('config', 'G-LNRWB06VGZ');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DuoSub Subtitle Creator Dual Subtitle Translator - SRT VTT ASS</title>
-    
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <meta name="keywords" content="DuoSub, Dual Subtitles, Subtitle Creator, Dual Subtitle Translator, Language Learning, Chrome Extension, SRT, VTT, ASS, Manifest V3, VLC, Kodi, MX Player">
-    <meta name="description" content="DuoSub Subtitle Creator Dual Subtitle Translator. Enhance language learning by adding secondary subtitles to any video player using local files.">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
     <header>
         <nav>
@@ -28,7 +26,7 @@
             </a>
             <div class="nav-buttons">
                 <a href="https://duosub.github.io/help" class="btn-top">Help Center</a>
-                <a href="#install" class="btn-top btn-outline">How to Install</a>
+                <a href="#install" class="btn-top btn-outline">Install / Download</a>
             </div>
         </nav>
       </div>
@@ -43,22 +41,58 @@
 
     <main>
         <section id="about">
-            <h2>About DuoSub</h2>
-            <p><strong>DuoSub Subtitle Creator Dual Subtitle Translator</strong> is a <strong>cross-platform browser extension</strong> designed to enhance <strong>Bilingual Learning Mode</strong>. It allows you to overlay <strong>custom subtitle files</strong> onto <strong>HTML5 video players</strong>, providing a simultaneous display of two languages to bridge the gap in learner comprehension.</p>
+    <h2>What is DuoSub?</h2>
+    <div class="about-content">
+        <p>
+            <strong>DuoSub Subtitle Creator</strong> is a powerful <strong>dual subtitle translator</strong> and <strong>cross-platform</strong> solution designed for deep <strong>Bilingual Learning</strong>.
+            Whether you are using our <strong>Chrome Extension</strong> for online streaming or our <strong>Standalone Desktop App</strong> for <strong>Windows 11</strong> and <strong>Linux</strong>, DuoSub bridges the gap in language comprehension.
+        </p>
+
+        <p>
+            Our tool allows you to overlay <strong>custom SRT/VTT subtitle files</strong> onto any <strong>HTML5 video player</strong>. By displaying two languages simultaneously, it transforms standard viewing into an active <strong>language learning</strong> experience-perfect for <strong>English learners</strong>, polyglots, and accessibility needs.
+        </p>
+
+        <p style="font-size: 0.9em; color: #666; border-left: 3px solid #007bff; padding-left: 15px; margin-top: 20px;">
+            <strong>Universal Compatibility:</strong> Optimized for <strong>Windows Desktop</strong>, <strong>Linux (Ubuntu/Debian)</strong>, and <strong>Web Browsers</strong> (Chrome, Edge, Brave). Process subtitles locally or online with <strong>secure SRT processing</strong>.
+        </p>
+
+        <div class="hashtags" style="margin-top: 20px; font-size: 0.85em; color: #007bff; opacity: 0.8;">
+            <span>#DuoSub #DualSubtitles #BilingualLearning #SubtitleTranslator #LanguageLearning #Windows11 #LinuxApp #ChromeExtension #PolyglotTools #SRTTranslator</span>
+        </div>
+    </div>
         </section>
 
         <section id="preview">
-            <h2>DuoSub in Action</h2>
-            <div class="video-container">
-                <iframe 
-                    src="https://www.youtube.com/embed/Q3Juw5eYnrc" 
-                    title="DuoSub Preview" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    <h2>DuoSub in Action</h2>
+    <div class="video-grid">
+        <div class="video-item">
+            <h3>Chrome Extension</h3>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/Q3Juw5eYnrc"
+                    title="DuoSub Preview Extension"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
                 </iframe>
             </div>
+        </div>
+
+        <div class="video-item">
+            <h3>Desktop Application</h3>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/UBKWenL30ek"
+                    title="DuoSub Preview App"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
         </section>
+
 
         <section id="compatibility">
             <h2>Supported Video Players</h2>
@@ -135,29 +169,106 @@
         </section>
 
         <section id="install">
-            <h2>Installation</h2>
-            <div class="install-grid">
-                <div class="card">
-                    <h3>Official Stores</h3>
-                    <p>Now available in the <strong>Chrome Web Store</strong>.</p>
-                    <a href="https://chromewebstore.google.com/detail/duosub-subtitle-creator/dnlmeijkfchinlchooiolkcchbcmpikj" class="btn-store" target="_blank">Add to Chrome</a>
-                </div>
-                <div class="card">
-                    <h3>Manual Install</h3>
-                    <p>Enable <b>Developer mode</b> and <b>Load unpacked</b> ZIP folder.</p>
-                    <a href="https://github.com/duosub/duosub.github.io/releases/download/v1.0.0/duosub_v1.0.0.zip" class="btn-download">Download Extension ZIP</a>
-                </div>
-            </div>
-        </section>
+    <h2>Installation</h2>
+    <div class="install-grid">
+        <div class="card">
+            <h3>Official Stores</h3>
+            <p>Now available in the <strong>Chrome Web Store</strong>.</p>
+            <a href="https://chromewebstore.google.com/detail/duosub-subtitle-creator/dnlmeijkfchinlchooiolkcchbcmpikj" class="btn-store" target="_blank">Add to Chrome</a>
+        </div>
+<div class="card">
+    <h3>Desktop App DuoSub</h3>
+    <p><strong>Portable Standalone Versions</strong></p>
+    <p>Full-featured desktop client for all your subtitle needs. No installation required.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; margin-top: 15px;">
+        <a href="https://github.com/duosub/duosub.github.io/releases/download/v.1.1/duosub-desktop-windows.exe" class="btn-download" style="width: 80%;">Download for Windows</a>
+        <a href="https://github.com/duosub/duosub.github.io/releases/download/v.1.1/duosub-desktop-linux" class="btn-download" style="width: 80%;">Download for Linux</a>
+    </div>
+
+    <p style="font-size: 0.8em; margin-top: 15px; color: #777;">
+        <i>Compatible with Windows 10/11 & Linux (Ubuntu, Debian, Mint, Fedora etc.)</i>
+    </p>
+</div>
+        <div class="card">
+    <h3>Manual Install (for Browsers)</h3>
+    <p>Install the extension on Chrome, Edge, or Brave in seconds:</p>
+
+    <div style="text-align: left; background: rgba(0,0,0,0.05); padding: 15px; border-radius: 8px; margin: 15px 0; font-size: 0.9em;">
+        <ol style="margin: 0; padding-left: 20px; line-height: 1.6;">
+            <li><b>Download & Unzip</b> the file below.</li>
+            <li>Open <code>chrome://extensions</code> in your browser.</li>
+            <li>Enable <b>"Developer mode"</b> (top right switch).</li>
+            <li>Click <b>"Load unpacked"</b> and select the unzipped folder.</li>
+        </ol>
+    </div>
+
+    <a href="https://github.com/duosub/duosub.github.io/releases/download/v1.0.0/duosub_v1.0.0.zip" class="btn-download">Download Extension ZIP</a>
+
+    <p style="font-size: 0.8em; margin-top: 10px; color: #666;">
+        <i>Works on all Chromium-based browsers.</i>
+    </p>
+</div>
+    </div>
+</section>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> DuoSub. All rights reserved.</p>
-        <div style="margin-top: 20px;">
-            <a href="https://duosub.github.io/help" style="color: white; margin-right: 15px;">Help Center</a>
-            <a href="https://duosub.github.io/donate/index.html" style="color: white;">Support ☕</a>
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center; padding: 0 20px;">
+
+        <div style="margin-bottom: 25px;">
+            <h3>Project DuoSub</h3>
+            <p style="color: #ccc; font-size: 0.95em; line-height: 1.6;">
+                <strong>DuoSub</strong> is a community-driven <strong>open-source subtitle tool</strong> created to revolutionize <strong>language learning</strong> through <strong>bilingual subtitle generation</strong>.
+                Our mission is to provide <strong>content accessibility</strong> for everyone, offering a <strong>cross-platform</strong> experience via our <strong>Chrome extension</strong> and <strong>portable Desktop app</strong> for <strong>Windows</strong> and <strong>Linux</strong>.
+            </p>
         </div>
-    </footer>
+
+        <div style="margin-bottom: 25px; font-size: 0.85em; color: #aaa;">
+            <p>Developed with ❤️ using:
+                <strong>Python</strong>,
+                <strong>PyQt6</strong>,
+                <strong>JavaScript</strong>,
+                <strong>pysubs2</strong>,
+                <strong>deep-translator</strong>
+                and powered by insights from <strong>Google Gemini</strong> AI.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 25px; font-size: 0.8em; color: #555; line-height: 1.8;">
+            <span style="margin: 0 5px;">#OpenSource</span>
+            <span style="margin: 0 5px;">#DualSubtitles</span>
+            <span style="margin: 0 5px;">#VideoTranslation</span>
+            <span style="margin: 0 5px;">#LanguageAcquisition</span>
+            <span style="margin: 0 5px;">#SRTtoDual</span>
+            <span style="margin: 0 5px;">#AccessibilityTools</span>
+            <span style="margin: 0 5px;">#PythonAutomation</span>
+            <span style="margin: 0 5px;">#GeminiAI</span>
+            <span style="margin: 0 5px;">#SubtitleEditor</span>
+        </div>
+
+        <div style="border-top: 1px solid #444; padding-top: 20px;">
+            <div style="margin-bottom: 15px;">
+                <a href="https://duosub.github.io/help" style="color: white; margin-right: 20px; text-decoration: none; font-weight: 500;">Help Center</a>
+                <a href="https://duosub.github.io/donate/index.html" style="color: white; text-decoration: none; font-weight: 500;">Support the Project ☕</a>
+                <a href="https://github.com/duosub/duosub.github.io/blob/main/LICENSE" style="color: #888; margin-left: 20px; text-decoration: none;" target="_blank">MIT License</a>
+            </div>
+
+            <p style="font-size: 0.8em; color: #777;">
+                &copy; <span id="year"></span> DuoSub Project. Focused on <strong>Bilingual Education</strong> and <strong>Global Subtitle Standards</strong>.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
     <script src="script.js"></script>
 </body>
