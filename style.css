@@ -41,7 +41,6 @@ nav {
     font-weight: bold;
     margin-left: 10px;
 }
-
 .btn-top2 {
     background-color: red;
     color: white;
@@ -80,6 +79,39 @@ nav {
     top: 0; left: 0; width: 100%; height: 100%; border: 0;
 }
 
+/* Container */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Name */
+.video-item h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/*  16:9 */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Пропорция 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 /* SEO Players Block (Single block, no borders) */
 .seo-players-block {
     text-align: left;
