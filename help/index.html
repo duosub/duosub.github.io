@@ -62,8 +62,7 @@
                     <li>Click <b>Deploy > New deployment</b>. Select <b>Web app</b>.</li>
                     <li>Execute as: <b>Me</b>, Access: <b>Anyone</b>. Copy the <b>Web App URL</b>.</li>
                 </ol>
-                <pre id="scriptCode">
-                    function doPost(e) {
+                <pre id="scriptCode">function doPost(e) {
   try {
     var p = JSON.parse(e.postData.contents);
     var translated = LanguageApp.translate(p.q, "", p.target || "en");
