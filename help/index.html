@@ -21,7 +21,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">DuoSub Support</div>
+            <div class="logo">DuoSub Help Support</div>
             <div>
                 <a href="#guide" class="btn-top">User Guide</a>
                 <a href="https://duosub.github.io/" class="btn-top" style="background: transparent; border: 1px solid var(--primary);">Main Page</a>
@@ -53,7 +53,7 @@
         </section>
 
         <section id="api-fix" style="background: #fff5f5;">
-            <h2>🔧 Fix "ALL_KEYS_DEAD" & API Limits</h2>
+            <h2>🔧 Fix "PERSONAL_KEYS" & API Limits</h2>
             <p>If the community <strong>Google Translation API</strong> is overloaded, use your own <strong>Personal API Key</strong> for unlimited speed:</p>
             <div class="card" style="text-align: left; max-width: 800px; margin: 0 auto;">
                 <ol>
@@ -62,14 +62,26 @@
                     <li>Click <b>Deploy > New deployment</b>. Select <b>Web app</b>.</li>
                     <li>Execute as: <b>Me</b>, Access: <b>Anyone</b>. Copy the <b>Web App URL</b>.</li>
                 </ol>
-                <pre id="scriptCode">function doPost(e) {
-  var p = JSON.parse(e.postData.contents);
-  var translated = LanguageApp.translate(p.q, "", p.target);
-  return ContentService.createTextOutput(JSON.stringify({
-    status: "success", 
-    translatedText: translated
-  })).setMimeType(ContentService.MimeType.JSON);
-}</pre>
+                <pre id="scriptCode">
+                    function doPost(e) {
+  try {
+    var p = JSON.parse(e.postData.contents);
+    var translated = LanguageApp.translate(p.q, "", p.target || "en");
+    
+    return ContentService.createTextOutput(JSON.stringify({
+      status: "success",
+      translatedText: translated
+    })).setMimeType(ContentService.MimeType.JSON);
+    
+  } catch (error) {
+    // If something goes wrong, return error status instead of crashing
+    return ContentService.createTextOutput(JSON.stringify({
+      status: "error",
+      message: error.toString()
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+</pre>
                 <button onclick="copyCode()" class="btn-download" style="width: 100%; border: none; cursor: pointer;">Copy Script Code</button>
             </div>
         </section>
