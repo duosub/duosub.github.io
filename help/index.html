@@ -64,21 +64,34 @@
                 </ol>
                 <pre id="scriptCode">function doPost(e) {
   try {
-    var p = JSON.parse(e.postData.contents);
-    var translated = LanguageApp.translate(p.q, "", p.target || "en");
+    var data = JSON.parse(e.postData.contents);
+    var targetLang = data.target || 'en';
+    var textToTranslate = data.q || '';
     
-    return ContentService.createTextOutput(JSON.stringify({
-      status: "success",
+    if (!textToTranslate) {
+      return createResponse({status: 'error', message: 'No text'});
+    }
+
+    var translated = LanguageApp.translate(textToTranslate, '', targetLang, {contentType: 'text'});
+    
+    return createResponse({
+      status: 'success',
       translatedText: translated
-    })).setMimeType(ContentService.MimeType.JSON);
+    });
     
   } catch (error) {
-    // If something goes wrong, return error status instead of crashing
-    return ContentService.createTextOutput(JSON.stringify({
-      status: "error",
-      message: error.toString()
-    })).setMimeType(ContentService.MimeType.JSON);
+   
+    return createResponse({status: 'error', message: error.toString()});
   }
+}
+
+function doGet(e) {
+  return createResponse({status: 'error', message: 'Ready to work. Use POST.'});
+}
+
+function createResponse(data) {
+  return ContentService.createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 </pre>
                 <button onclick="copyCode()" class="btn-download" style="width: 100%; border: none; cursor: pointer;">Copy Script Code</button>
