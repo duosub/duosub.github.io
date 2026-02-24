@@ -54,6 +54,19 @@ nav {
 .btn-top2:hover {
     background-color: darkred;
 }
+.btn-top3 {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+}
+
+.btn-top3:hover {
+    background-color: darkgreen;
+    
 .btn-outline {
     background: transparent !important;
     border: 1px solid var(--primary);
